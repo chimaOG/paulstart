@@ -3,6 +3,8 @@ import React,  {useState} from 'react';
 import {AiOutlineMenu} from 'react-icons/ai';
 import {GrClose} from 'react-icons/gr';
 
+import { HashLink as Link } from 'react-router-hash-link';
+
 import 'animate.css';
 
 import logo from '../../assets/logo.png';
@@ -36,7 +38,7 @@ const Header = () => {
     window.addEventListener('scroll', logoText);
 
     return (
-        <div className = 'fixed top-0  w-full flex justify-center h-40 items-center transitions-all bg-transparent z-20' >
+        <div id='header' className = 'fixed top-0  w-full flex justify-center h-40 items-center transitions-all bg-transparent z-20' >
             <div className = 'fixed top-0 flex justify-between items-center px-5 md:px-10 w-full h-32 bg-transparent ' >
                 <div className = 'flex flex-row items-center justify-center bg-main_yellow rounded-full p-4 md:ml-7 z-20'>
                     <img src={logo} alt = 'brand-logo' className = ' w-10 md:w-12'/>
@@ -66,16 +68,24 @@ const Header = () => {
                     {menu && (
                             <div className = {`flex flex-col items-around justify-center w-full bg-main_yellow rounded-br-lg w-32 md:w-40 px-3 py-2 ${menu? 'animate-fade-in-down' : 'animate-fade-out-up'} animate-fade-in-down  `}>
                                 <div>
-                                    <p className = 'font-sans text-sm md:text-lg text-black font-medium tracking-normal w-4/5 ml-4' >Portfolio</p>
+                                    <Link smooth to='#portfolio' onClick={showMenu}>
+                                        <p className = 'font-sans text-sm md:text-lg text-black font-medium tracking-normal w-4/5 ml-4' >Portfolio</p>
+                                    </Link>
                                 </div>
                                 <div>
-                                    <p className = 'font-sans text-sm md:text-lg text-black font-medium mt-3 tracking-normal w-4/5 ml-4' >About me</p>
+                                    <Link smooth to='#intro' onClick={showMenu}>
+                                        <p className = 'font-sans text-sm md:text-lg text-black mt-3 font-medium tracking-normal w-4/5 ml-4' >About me</p>
+                                    </Link>
                                 </div>
                                 <div>
-                                    <p className = 'font-sans text-sm md:text-lg text-black font-medium mt-3 tracking-normal w-4/5 ml-4' >Clients</p>
+                                    <Link smooth to='#customers' onClick={showMenu}>
+                                        <p className = 'font-sans text-sm md:text-lg text-black mt-3 font-medium tracking-normal w-4/5 ml-4' >Clients</p>
+                                    </Link>
                                 </div>
                                 <div>
-                                    <p className = 'font-sans text-sm md:text-lg text-black font-semibold mt-5 tracking-normal w-4/5 text-center animate__animated animate__pulse  animate__infinite' >Book a Session!</p>
+                                    <Link smooth to='#booking' onClick={showMenu}>
+                                        <p className = 'font-sans text-sm md:text-lg text-black font-semibold mt-5 tracking-normal w-4/5 text-center animate__animated animate__pulse  animate__infinite' >Book a Session!</p>
+                                    </Link>
                                 </div>
                             </div>
                         )}

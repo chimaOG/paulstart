@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 const Intro = () => {
     return (
-        <div className = 'w-full flex flex-col lg:flex-row items-center lg:px-10 xl:px-40 2xl:px-48' style={{backgroundColor: 'rgba(2,27,41)'}}>
+        <div id='intro' className = 'w-full flex flex-col lg:flex-row items-center lg:px-10 xl:px-40 2xl:px-48' style={{backgroundColor: 'rgba(2,27,41)'}}>
             <div className = 'w-full hidden lg:flex lg:w-1/2 flex flex-col items-center'>
                 <img src = 'https://cdn.pixabay.com/photo/2021/12/13/09/46/moto-bikes-6867911__340.jpg' 
                 className = 'w-3/4 xl:w-1/2 object-contain ml-32 rotate-12' />
@@ -33,9 +36,11 @@ const Intro = () => {
                                       
                     </div>
                 </div>
-                <div className = 'bg-main_yellow p-4 w-5/6 p-4 md:w-3/5 flex items-center justify-around rounded-lg uppercase mb-20 text-sm font-bold '>
-                    WORK WITH ME
-                </div>
+                <Link smooth to='#booking'>
+                    <div className = 'bg-main_yellow p-4 w-5/6 p-4 md:w-3/5 ml-7 flex items-center justify-around rounded-lg uppercase mb-20 text-sm font-bold '>
+                        WORK WITH ME
+                    </div>
+                </Link>
             </div>
         </div>
     )

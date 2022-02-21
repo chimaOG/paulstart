@@ -16,7 +16,8 @@ const Portfolio = () => {
     console.log(images2);
 
     return (
-        <div  
+        <div 
+        id = 'portfolio' 
         className = 'flex flex-col justify-between items-start lg:px-10 xl:px-40 2xl:px-48'
         style={{backgroundColor: 'rgba(1,20,31)'}}>
             <div className = ' md:ml-10 mt-20 mb-20'>

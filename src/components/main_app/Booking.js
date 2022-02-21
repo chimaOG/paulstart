@@ -22,7 +22,7 @@ const Booking = () => {
     }
 
     return (
-        <div className='w-full p-16 py-36 md:flex lg:px-10 xl:px-40 2xl:px-48 bg-bg_light' >
+        <div id='booking' className='w-full p-16 py-36 md:flex lg:px-10 xl:px-40 2xl:px-48 bg-bg_light' >
 
             <div className='w-full md:w-1/2 flex flex-col justify-center items-center' >
 
