@@ -31,6 +31,14 @@ module.exports = {
       animation: {
           'fade-in-down': 'fade-in-down 0.5s ease-out',
           'fade-out-up': 'fade-out-up 1.5s ease-out',
+      },
+      colors: {
+        'text_black':'#01141f',
+        'main_yellow':'#f2a70c',
+        'bg_light': '#021b29',
+        'bg_dark': '#01141f',
+        'text_grey': 'hsla(0, 0%, 100%, 0.5)',
+
       }
     },
   },

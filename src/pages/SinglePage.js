@@ -1,7 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react'
 
-import Axios from 'axios';
-
 import {Banner, Booking, Customers, Footer, Intro,  Header, Portfolio} from '../components/main_app';
 
 
